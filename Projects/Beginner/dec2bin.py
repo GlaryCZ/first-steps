@@ -22,6 +22,10 @@ def bin2dec(bin_num):
     for bit in reversed_bin_num:
         if bit == "1":
             res += s
+        elif bit == "0":
+            pass
+        else:
+            return "Only characters '0' and '1' are allowed!"
         s *= 2
     return res
 
