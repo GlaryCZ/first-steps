@@ -2,13 +2,13 @@ import pygame
 import random
 import sys
 
-# initialize it
+# initialize it  vgv
 pygame.init()
 
 # configurations
 frames_per_second = 10
 window_height = 600
-window_width = 600
+window_width = 600 
 
 screen = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption('Silly snake')
