@@ -1,13 +1,19 @@
 from tkinter import *
+import random
 
 root = Tk()
+
 N = 5
 blocks = []
-
+win_pos = []
 for i in range(N**2):
     blocks.append(i+1)
 blocks = blocks[:-1]
 blocks.append(" ")
+for i in range(N**2):
+    win_pos.append(i+1)
+win_pos = win_pos[:-1]
+win_pos.append(" ")
 print(blocks)
 def draw(blocks):
     for i, block in enumerate(blocks):
@@ -30,10 +36,21 @@ def up(p):
 
         print(blocks)
         draw(blocks)
+        check_win(blocks)
 def down(p):
     if not blocks.index(" ") > N**2-N-1:
-        print("penis")
-        # TODO
+        poped2i = blocks.index(" ")+N
+        poped2 = blocks.pop(blocks.index(" ")+N)
+        poped1i = blocks.index(" ")
+        blocks.pop(blocks.index(" "))
+
+        blocks.insert(poped1i, poped2)
+        blocks.insert(poped2i, " ")
+        
+
+        print(blocks)
+        draw(blocks)
+        check_win(blocks)
 
 def left(p):
     if not (blocks.index(" ")) % N == 0:
@@ -45,6 +62,7 @@ def left(p):
         blocks.insert(poped1i, " ")
         print(blocks)
         draw(blocks)
+        check_win(blocks)
 
 def right(p):
     if not (blocks.index(" ")+1) % N == 0:
@@ -54,12 +72,35 @@ def right(p):
         blocks.pop(blocks.index(" "))
 
         blocks.insert(poped1i, poped2)
+        print(poped2i)
         blocks.insert(poped2i, " ")
         
 
         print(blocks)
         draw(blocks)
+        check_win(blocks)
 
+
+def check_win(c):
+    print("penis")
+    print(blocks)
+    print(win_pos)
+    if blocks == win_pos:
+        print("######################################")
+        print("win")
+
+def shuffle(x):
+    for i in range(x):
+        c = random.randint(0, 3)
+        if c == 0:
+            right(False)
+        elif c == 1:
+            left(False)
+        elif c == 2:
+            up(False)
+        else:
+            down(False)
+shuffle(100)
 
 root.bind("<w>", up)
 root.bind("<s>", down)
