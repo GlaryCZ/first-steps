@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        button {
+            padding-left: 13px;
+            padding-right: 13px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .negr_div {
+            display: inline;
+        }
+    </style>
+    <p id="demo">Klikni na tlacitko 1</p>
+    <h1>Lol </h1>
+
+</head>
+
+<body>
+    <div><button id="1" onclick="storeValue(this)">1</button><button id="2" onclick="storeValue(this)">2</button><button
+            id="3" onclick="storeValue(this)">3</button><button onclick="storeValue(this)">+</button>
+    </div>
+    <div><button id="4" onclick="storeValue(this)">4</button><button id="5" onclick="storeValue(this)">5</button><button
+            id="6" onclick="storeValue(this)">6</button><button onclick="storeValue(this)">-</button>
+    </div>
+    <div><button id="7" onclick="storeValue(this)">7</button><button id="8" onclick="storeValue(this)">8</button><button
+            id="9" onclick="storeValue(this)">9</button><button onclick="storeValue(this)">*</button>
+    </div>
+    <div>
+        <button onclick="clear_sel_values()">Del</button><button id="0" onclick="storeValue(this)">0</button><button
+            onclick="storeValue(this)">.</button><button onclick="storeValue(this)">/</button>
+    </div>
+    <button onclick="getPriklad()">=</button>
+    <div class="negr_div" id="priklad"></div>
+    <div class="negr_div" id="vysledek"></div>
+
+
+    <script src="penis.js"></script>
+</body>
+
+</html>
