@@ -1,0 +1,1 @@
+C:\Users\kmatl\Documents\GitHub\first-steps\Projects\rust\Beginner\hello\ world\tutorial\target\debug\tutorial.exe: C:\Users\kmatl\Documents\GitHub\first-steps\Projects\rust\Beginner\hello\ world\tutorial\src\main.rs
